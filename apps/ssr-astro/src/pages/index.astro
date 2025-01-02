@@ -1,0 +1,21 @@
+---
+const HELLO = import.meta.env.HELLO;
+const PUBLIC_HELLO = import.meta.env.PUBLIC_HELLO;
+---
+
+<div>
+	<h1>HELLO: {HELLO}</h1>
+	<h1>PUBLIC_HELLO: {PUBLIC_HELLO}</h1>
+	<script>
+		const HELLO = import.meta.env.HELLO;
+		console.log(`HELLO: ${HELLO}`);
+		console.assert(typeof HELLO === "undefined", "HELLO should be undefined");
+
+		const PUBLIC_HELLO = import.meta.env.PUBLIC_HELLO;
+		console.log(`PUBLIC_HELLO: ${PUBLIC_HELLO}`);
+		console.assert(
+			typeof PUBLIC_HELLO === "string",
+			"PUBLIC_HELLO should be a string"
+		);
+	</script>
+</div>

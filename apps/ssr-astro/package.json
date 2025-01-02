@@ -1,0 +1,16 @@
+{
+  "name": "ssr-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "dotenvx run -- astro dev --port 3001",
+    "build": "astro check && dotenvx run -- astro build",
+    "start": "dotenvx run --env HOST=0.0.0.0 --env PORT=3001 -- node ./dist/server/entry.mjs",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.0.0",
+    "@dotenvx/dotenvx": "^1.32.0",
+    "astro": "^5.1.2"
+  }
+}
