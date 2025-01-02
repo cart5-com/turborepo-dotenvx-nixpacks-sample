@@ -1,0 +1,24 @@
+{
+  "name": "spa-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "dotenvx run -- vite --port 3002",
+    "build": "dotenvx run -- vue-tsc -b && dotenvx run -- vite build",
+    "start": "http-server dist -p 3002 -a 0.0.0.0 -d false --log-ip false -c-1 --cors --gzip --brotli --proxy http://localhost:3002?"
+  },
+  "dependencies": {
+    "@dotenvx/dotenvx": "^1.32.0",
+    "http-server": "^14.1.1",
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/tsconfig": "^0.7.0",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.2.0"
+  }
+}

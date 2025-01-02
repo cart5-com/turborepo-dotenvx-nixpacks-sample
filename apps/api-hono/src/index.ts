@@ -4,7 +4,7 @@ import { Hono } from 'hono'
 const app = new Hono()
 
 app.get('/', (c) => {
-  return c.text(`process.env.HELLO:${process.env.HELLO || ''}`)
+  return c.text(`HONO: process.env.HELLO:${process.env.HELLO || ''}`)
 })
 
 const port = 3000
